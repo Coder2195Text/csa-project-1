@@ -1,10 +1,5 @@
 package com.coder2195.password;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
 public class PasswordChecker {
   private String password;
   private boolean completed = false;
@@ -34,6 +29,10 @@ public class PasswordChecker {
 
   }
 
+  public boolean isCompleted() {
+    return completed;
+  }
+
   private void checkErrors() {
     boolean hasErrors = false;
     
@@ -43,8 +42,7 @@ public class PasswordChecker {
         errors[i] = challenges[i].execute(password);
         if (errors[i]) {
           hasErrors = true;
-        }
-        
+        } 
       }
 
       if (!hasErrors) {

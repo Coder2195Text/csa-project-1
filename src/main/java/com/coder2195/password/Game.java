@@ -43,7 +43,7 @@ public class Game {
 
       gameState = GameState.PLAYING;
     } else if (gameState == GameState.PLAYING) {
-      System.out.println("Playing");
+      
     } else if (gameState == GameState.SAVE_PROGRESS) {
       System.out.println("Game Over");
     } else {
