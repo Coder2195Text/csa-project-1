@@ -12,12 +12,14 @@ public class ChallengeList {
       "Must contain at least one uppercase letter.",
       "Must contain numbers.",
       "Must have a special character.",
+      "Password must contain the instagram of Justin's club.",
       "Must contain a month of the year.",
       "Must contain a prime number.",
       "Must include the first name of the creator of this video: \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"",
       "Must name the language used to write this game.",
       "Must include at least 1 emoji.",
-      "Letters 10-13 must be: \"D34D\"",
+      "Letters 10-13 must be: \"D34D\""
+
   };
 
   public static boolean challenge1(String password) {
@@ -37,12 +39,16 @@ public class ChallengeList {
   }
 
   public static boolean challenge5(String password) {
+    return password.toLowerCase().matches(".*bths.repair.*");
+  }
+
+  public static boolean challenge6(String password) {
     return password.matches(
         ".*[Jj]anuary.*|.*[Ff]ebruary.*|.*[Mm]arch.*|.*[Aa]pril.*|.*[Mm]ay.*|.*[Jj]une.*|.*[Jj]uly.*|.*[Aa]ugust.*|.*[Ss]eptember.*|.*[Oo]ctober.*|.*[Nn]ovember.*|.*[Dd]ecember.*");
 
   }
 
-  public static boolean challenge6(String password) {
+  public static boolean challenge7(String password) {
     // get all numbers from string ie "D34D3" yields [34, 3]
     String[] numbers = password.split("[^0-9]+");
     // convert to int array
@@ -56,19 +62,19 @@ public class ChallengeList {
     return false;
   }
 
-  public static boolean challenge7(String password) {
+  public static boolean challenge8(String password) {
     return password.matches(".*[Rr]ick.*");
   }
 
-  public static boolean challenge8(String password) {
+  public static boolean challenge9(String password) {
     return password.matches(".*[Jj]ava.*");
   }
 
-  public static boolean challenge9(String password) {
+  public static boolean challenge10(String password) {
     return EmojiManager.containsEmoji(password);
   }
 
-  public static boolean challenge10(String password) {
+  public static boolean challenge11(String password) {
     if (password.length() < 13)
       return false;
     String subString = password.substring(9, 13);

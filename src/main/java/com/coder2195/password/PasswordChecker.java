@@ -15,6 +15,7 @@ public class PasswordChecker {
       ChallengeList::challenge8,
       ChallengeList::challenge9,
       ChallengeList::challenge10,
+      ChallengeList::challenge11,
   };
 
   private boolean[] errors;
