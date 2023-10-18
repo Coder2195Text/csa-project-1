@@ -17,9 +17,11 @@ public class ChallengeList {
       "Must contain a prime number.",
       "Must include the first name of the creator of this video: \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"",
       "Must name the language used to write this game.",
-      "Must include at least 1 emoji.",
-      "Letters 10-13 must be: \"D34D\""
-
+      "Must be at least 40 characters long",
+      "Letters 10-13 must be: \"D34D\"",
+      "First word of the name of this game: ඞ",
+      "Must contain the country that is guilty in the Russo-Ukrainian war.",
+      "Must contain the name of this political idea: ☭"
   };
 
   public static boolean challenge1(String password) {
@@ -43,8 +45,8 @@ public class ChallengeList {
   }
 
   public static boolean challenge6(String password) {
-    return password.matches(
-        ".*[Jj]anuary.*|.*[Ff]ebruary.*|.*[Mm]arch.*|.*[Aa]pril.*|.*[Mm]ay.*|.*[Jj]une.*|.*[Jj]uly.*|.*[Aa]ugust.*|.*[Ss]eptember.*|.*[Oo]ctober.*|.*[Nn]ovember.*|.*[Dd]ecember.*");
+    return password.toLowerCase().matches(
+        ".*january.*|.*february.*|.*march.*|.*april.*|.*may.*|.*june.*|.*july.*|.*august.*|.*september.*|.*october.*|.*november.*|.*december.*");
 
   }
 
@@ -63,15 +65,15 @@ public class ChallengeList {
   }
 
   public static boolean challenge8(String password) {
-    return password.matches(".*[Rr]ick.*");
+    return password.toLowerCase().matches(".*rick.*");
   }
 
   public static boolean challenge9(String password) {
-    return password.matches(".*[Jj]ava.*");
+    return password.toLowerCase().matches(".*java.*");
   }
 
   public static boolean challenge10(String password) {
-    return EmojiManager.containsEmoji(password);
+    return password.length() >= 40;
   }
 
   public static boolean challenge11(String password) {
@@ -79,5 +81,17 @@ public class ChallengeList {
       return false;
     String subString = password.substring(9, 13);
     return subString.equals("DALD");
+  }
+
+  public static boolean challenge12(String password) {
+    return password.toLowerCase().matches(".*among.*");
+  }
+
+  public static boolean challenge13(String password) {
+    return password.toLowerCase().matches(".*russia.*");
+  }
+
+  public static boolean challenge14(String password) {
+    return password.toLowerCase().matches(".*communism.*");
   }
 }
