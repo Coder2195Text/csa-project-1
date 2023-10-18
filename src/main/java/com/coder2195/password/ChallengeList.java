@@ -80,7 +80,7 @@ public class ChallengeList {
     if (password.length() < 13)
       return false;
     String subString = password.substring(9, 13);
-    return subString.equals("DALD");
+    return subString.equals("D34D");
   }
 
   public static boolean challenge12(String password) {
