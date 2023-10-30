@@ -15,13 +15,16 @@ public class ChallengeList {
       "Password must contain the instagram of Justin's club.",
       "Must contain a month of the year.",
       "Must contain a prime number.",
-      "Must include the first name of the creator of this video: \"https://www.youtube.com/watch?v=dQw4w9WgXcQ\"",
+      "Must include the first name of the creator of this video: \"https://www.youtube.com/shorts/bZGethiDSo0\"",
       "Must name the language used to write this game.",
       "Must be at least 40 characters long",
       "Letters 10-13 must be: \"D34D\"",
-      "First word of the name of this game: ඞ",
+      "First word of the name of this game: https://www.compart.com/en/unicode/U+0D9E",
       "Must contain the country that is guilty in the Russo-Ukrainian war.",
-      "Must contain the name of this political idea: ☭"
+      "Must contain the name of this political idea: https://www.compart.com/en/unicode/U+262D",
+      "What is a OH- ion called?",
+      "Contains teacher's last name.",
+      "Which borough should Rockaway REALLY be in?"
   };
 
   public static boolean challenge1(String password) {
@@ -65,7 +68,7 @@ public class ChallengeList {
   }
 
   public static boolean challenge8(String password) {
-    return password.toLowerCase().matches(".*rick.*");
+    return password.toLowerCase().matches(".*steven.*");
   }
 
   public static boolean challenge9(String password) {
@@ -93,5 +96,21 @@ public class ChallengeList {
 
   public static boolean challenge14(String password) {
     return password.toLowerCase().matches(".*communism.*");
+  }
+
+  public static boolean challenge15(String password) {
+    return password.toLowerCase().matches(".*hydroxide.*");
+  }
+
+  public static boolean challenge16(String password) {
+    return password.toLowerCase().matches(".*donald.*");
+  }
+
+  public static boolean challenge17(String password) {
+    return password.toLowerCase().matches(".*holmer.*");
+  }
+
+  public static boolean challenge18(String password) {
+    return password.toLowerCase().matches(".*brooklyn.*");
   }
 }
